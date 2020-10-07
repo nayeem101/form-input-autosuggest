@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Input AutoSugestion</title>
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="search-box container">
+      <form action="/data" method="get" autocomplete="off" class="search-form">
+        <label for="myInput"> Search Country</label>
+        <div id="search-wrapper">
+          <span> <i class="material-icons">search</i> </span>
+          <div class="autocomplete">
+            <input
+              type="text"
+              id="myInput"
+              placeholder="enter country name"
+              name="title"
+            />
+          </div>
+          <span id="clear" title="clear input">
+            <i class="material-icons">clear</i>
+          </span>
+        </div>
+        <input
+          type="submit"
+          id="searchBtn"
+          class="btn custom-color lighten-3"
+          value="Search"
+        />
+      </form>
+    </div>
+    <script src="autoSuggest.js"></script>
+  </body>
+</html>

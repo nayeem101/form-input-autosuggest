@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.search-box {
+  padding: 0.5rem 0;
+}
+.search-form {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.search-form label {
+  font-size: 1.2rem;
+  display: block;
+  font-family: Verdana, Arial, sans-serif;
+  color: #cbfffe;
+}
+#search-wrapper {
+  color: #f3f3f3;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #7fcac9;
+  border-radius: 8px;
+}
+#search-wrapper input[type="text"] {
+  outline: none;
+  color: #f3f3f3;
+  padding: 2px 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  font-size: 1.25rem;
+  box-shadow: none;
+}
+#search-wrapper span {
+  flex-basis: 6%;
+}
+#search-wrapper span i {
+  font-size: 2rem;
+  padding: 0.5rem 4px;
+  color: #7fcac9;
+}
+#search-wrapper span#clear {
+  display: none;
+  cursor: pointer;
+}
+#search-wrapper span#clear i {
+  color: red !important;
+  transition: 0.2s ease-in-out;
+}
+#search-wrapper span#clear:hover i {
+  color: brown !important;
+}
+.search-form input[type="submit"] {
+  width: 25%;
+  min-width: 120px;
+  margin-top: 0.5rem;
+}
+.autocomplete {
+  flex-basis: 94%;
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+.autocomplete-items {
+  color: #0b0b0b;
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 9999;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #cbfffe;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  background-color: #7fcac9;
+}
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+#myslide .caption {
+  background-color: #303057a8 !important;
+  padding: 1rem;
+}
+@media only screen and (max-width: 680px) {
+  #myslide .caption h4 {
+    font-size: 2rem;
+  }
+  #search-wrapper {
+    width: 95%;
+    padding: 0 0.5rem;
+  }
+  #search-wrapper input[type="text"] {
+    padding: 2px;
+  }
+  #search-wrapper span i {
+    padding: 0.5rem 0;
+  }
+}
+.scrollTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 998;
+  font-size: 1.2rem;
+  color: #f3f3f3;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #1976d2;
+  box-shadow: 0 0 10px 3px #1460ac;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in;
+}
+.scrollTop.showBtn {
+  opacity: 1;
+  pointer-events: visible;
+}
